@@ -1,6 +1,5 @@
 import "./App.css";
 import React, { useState } from "react";
-import Radium from 'radium';
 import Person from "./Person/Person.js";
 function App() {
   const [personState, setPersonState] = useState({
@@ -40,6 +39,7 @@ function App() {
     border: "1px solid blue",
     padding: "8px",
     cursor: "pointer",
+
   };
   let persons = null;
   if (showForm.showPersons) {
@@ -59,6 +59,7 @@ function App() {
       </div>
     );
     style.backgroundColor = "red";
+
   }
   let classes = [];
   if(personState.persons.length <= 2) {
@@ -79,4 +80,4 @@ function App() {
   );
 }
 
-export default Radium(App);
+export default App;
